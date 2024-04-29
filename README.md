@@ -22,6 +22,14 @@ sh ./uninstall.sh
 
 ```
 
+Updates are handled by running the install script again, you can just run the install script and all good! However, Tetr.io desktop might have major updates which are handled manually, you may need to change the version in install.sh to make sure you got the right major version.
+
+```bash
+
+sh ./install.sh
+
+```
+
 ## Details
 
 The script will install the application in the following destinations if you have installed locally:
