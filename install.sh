@@ -40,10 +40,10 @@ if [ ! -d $local_bin_path ]; then
   mkdir $local_bin_path
 fi
 
-touch $local_bin_path
-chmod u+x $local_bin_path
+touch $app_bin_in_local_bin
+chmod u+x $app_bin_in_local_bin
 echo "#!/bin/bash
-$app_installation_directory/TETR.IO" >> $local_bin_path
+$app_installation_directory/TETR.IO" >> $app_bin_in_local_bin
 
 echo "Created executable for your \$PATH if you ever need"
 
