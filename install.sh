@@ -17,6 +17,24 @@ echo "Welcome to Tetr.io tarball installer, just chill and wait for the installa
 
 sleep 1
 
+echo "Checking if old files exist"
+if [ -f $app_bin_in_local_bin ]; then
+  echo "Old bin file detected, removing..."
+  rm $app_bin_in_local_bin
+fi
+
+if [ -d $app_installation_directory ]; then
+  echo "Old app files are found, removing..."
+  rm -rf $app_installation_directory
+fi
+
+if [ -f $desktop_in_local_applications ]; then
+  echo "Old bin file detected, removing..."
+  rm $desktop_in_local_applications
+fi
+
+sleep 1
+
 echo "Installing the latest package"
 curl -L -o $tar_location $official_package_location
 
