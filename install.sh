@@ -12,6 +12,8 @@ local_bin_path="$HOME/.local/bin"
 local_application_path="$HOME/.local/share/applications"
 app_bin_in_local_bin="$local_bin_path/$app_name"
 desktop_in_local_applications="$local_application_path/$app_name.desktop"
+icon_path=$app_installation_directory/icon.png
+executable_path=$app_installation_directory/TETR.IO
 
 echo "Welcome to Tetr.io tarball installer, just chill and wait for the installation to complete!"
 
@@ -61,19 +63,19 @@ fi
 touch $app_bin_in_local_bin
 chmod u+x $app_bin_in_local_bin
 echo "#!/bin/bash
-$app_installation_directory/TETR.IO" >> $app_bin_in_local_bin
+$executable_path" >> $app_bin_in_local_bin
 
 echo "Created executable for your \$PATH if you ever need"
 
-curl -o "$app_installation_directory/icon.png" https://txt.osk.sh/branding/tetrio-color.png
+curl -o "$icon_path" https://txt.osk.sh/branding/tetrio-color.png
 
 touch $desktop_in_local_applications
 echo "
 [Desktop Entry]
 Name=Tetr.IO
 Keywords=game,tetris,tetrio
-Exec=$app_installation_directory/TETR.IO
-Icon=$app_installation_directory/icon.png
+Exec=$executable_path
+Icon=$icon_path
 Terminal=false
 Type=Application
 Categories=Game;Online;
