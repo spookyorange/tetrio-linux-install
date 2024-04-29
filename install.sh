@@ -29,7 +29,7 @@ if [ ! -d $universal_path_for_installation_directory ]; then
   mkdir $universal_path_for_installation_directory
 fi
 
-mv $open_tar_location $app_installation_directory
+mv $open_tar_application_data_location $app_installation_directory
 
 echo "$app_name successfully moved to your safe place!"
 
