@@ -52,7 +52,7 @@ curl -o "$app_installation_directory/icon.png" https://txt.osk.sh/branding/tetri
 touch $desktop_in_local_applications
 echo "
 [Desktop Entry]
-Name=Tetr.io
+Name=Tetr.IO
 Keywords=game,tetris,tetrio
 Exec=$app_installation_directory/TETR.IO
 Icon=$app_installation_directory/icon.png
