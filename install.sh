@@ -69,7 +69,13 @@ echo "Created executable for your \$PATH if you ever need"
 
 curl -o "$icon_path" https://txt.osk.sh/branding/tetrio-color.png
 
+if [ ! -d $local_application_path ]; then
+  echo "Creating the $local_application_path directory for desktop file"
+  mkdir $local_application_path
+fi
+
 touch $desktop_in_local_applications
+
 echo "
 [Desktop Entry]
 Name=Tetr.IO
