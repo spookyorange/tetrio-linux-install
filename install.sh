@@ -1,13 +1,13 @@
 #!/bin/bash
 
 app_name="tetrio"
-tetrio_desktop_version="9"
+tetrio_desktop_version="10"
 literal_name_of_installation_directory=".tarball-installations"
 universal_path_for_installation_directory="$HOME/$literal_name_of_installation_directory"
 app_installation_directory="$universal_path_for_installation_directory/tetrio"
 official_package_location="https://tetr.io/about/desktop/builds/$tetrio_desktop_version/TETR.IO%20Setup.tar.gz"
 tar_location="./hello.tar.gz"
-open_tar_application_data_location="tetrio-desktop-9.0.0"
+open_tar_application_data_location="tetrio-desktop-10.0.0"
 local_bin_path="$HOME/.local/bin"
 local_application_path="$HOME/.local/share/applications"
 app_bin_in_local_bin="$local_bin_path/$app_name"
@@ -79,6 +79,7 @@ touch $desktop_in_local_applications
 echo "
 [Desktop Entry]
 Name=Tetr.IO
+Comment=Stack those blocks!
 Keywords=game,tetris,tetrio
 Exec=$executable_path
 Icon=$icon_path
